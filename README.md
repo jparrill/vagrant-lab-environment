@@ -45,6 +45,6 @@ After your modifications, just type this:
 vagrant up
 ```
 
-Now you are ready to do you laboratory/workshop/practice/etc...
+Now you are ready to do your laboratory/workshop/practice/etc...
 
 Enjoy! ;)
