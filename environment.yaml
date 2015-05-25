@@ -1,0 +1,16 @@
+---
+gfs01:
+  memory: 1024
+  cpus: 1
+  address: 192.168.33.10
+  box: RH7.1
+  storage: 5
+  storage_port: 0
+
+gfs02:
+  memory: 1024
+  cpus: 1
+  address: 192.168.33.11
+  box: RH7.1
+  storage: 5
+  storage_port: 1
