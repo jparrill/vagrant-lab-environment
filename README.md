@@ -35,6 +35,16 @@ gfs02:
   storage_port: 1
 ```
 
-Now will wake up 2 VMs with this details, 1CPU, 1024 gb de RAM, the Box name RH7.1 and 5GB of storage on a SCSI port
+This Vagrantfile will wake up 2 VMs with this details, 1CPU, 1024 gb de RAM, the Box name RH7.1 and 5GB of storage on a SCSI port
 (I just using SCSI because of many errors with SATA controller of Vbox).
 Feel free to modify the Vagrant file as your needs.
+
+After your modifications, just type this:
+
+```
+vagrant up
+```
+
+Now you are ready to do you laboratory/workshop/practice/etc...
+
+Enjoy! ;)
