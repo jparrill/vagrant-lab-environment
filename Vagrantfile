@@ -29,8 +29,10 @@ Vagrant.configure(2) do |config|
       end
       if details.has_key?('storage')
         node.vm.provider 'virtualbox' do |vb|
-          vb.customize ['createhd', '--filename', "#{name}.vdi", '--size', details['storage'] * 1024]
-          vb.customize ["storagectl", :id, "--name", "SCSI Controller", "--add", "scsi"]
+          unless File.exist?("#{name}.vdi")
+            vb.customize ['createhd', '--filename', "#{name}.vdi", '--size', details['storage'] * 1024]
+            vb.customize ["storagectl", :id, "--name", "SCSI Controller", "--add", "scsi"]
+          end
           vb.customize ['storageattach', :id, '--storagectl', 'SCSI Controller', '--port', details['storage_port'], '--device', 0, '--type', 'hdd', '--medium', "#{name}.vdi"]
         end
       end
